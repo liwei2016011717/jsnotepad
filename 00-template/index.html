@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsnotepad</title>
+  <link rel="stylesheet" href="layout.css">
+  <link rel="icon" href="https://i.wangding.in/favicon.ico" sizes="48x48" type="image/png">
+</head>
+<body>
+<div class="note">
+  <input type="button" value="弹出对话框">
+</div>
+<!--
+<div class="notepad-goto-dlg">
+   <div class="box">
+    <div class="titlebar">
+      <p>转到指定行</p>
+      <span class="btn-close">×</span>
+    </div>
+    <div class="main">
+      <label for="" class="num">行号(L):</label><br>
+      <input type="text" class="txt"><br>
+      <input type="button" class="goto" value="转到">
+      <input type="button" class="cancel" value="取消">
+    </div>
+  </div>
+</div>
+-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="main.js"></script>
+<script>
+$(function() {
+    var $btnTest = $('div.note>input[type="button"]');
+    $btnTest.click(function() {
+      $dlgGoto.show({
+          lineNum: 4,
+          totalLine: 5,
+          gotoHandler: function(){ console.log("success")  } 
+      });
+    });
+});
+</script>
+</body>
+</html>
